@@ -1,0 +1,19 @@
+[project]
+name = "skill-audit-review"
+version = "0.1.0"
+description = "CrewAI community example: review a skill dependency with 1VR's public skill-audit API."
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai>=0.86",
+    "requests>=2.32",
+]
+
+[project.scripts]
+skill-audit-review = "skill_audit_review.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/skill_audit_review"]
